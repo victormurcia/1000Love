@@ -5,8 +5,154 @@ import random
 import time
 import json
 
+def inject_custom_css():
+    """
+    Inject custom CSS to style the Streamlit application with black background.
+    
+    This function customizes the padding, margins, layout, and appearance of various elements within the Streamlit app.
+    """
+    st.markdown(
+        """
+        <style>
+        /* Main app background */
+        .stApp {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        /* Main content area */
+        .main {
+            background-color: #000000;
+        }
+        
+        /* Block container */
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #000000;
+        }
+        
+        /* Radio button styling */
+        .stRadio > div {
+            margin-bottom: -10px;
+        }
+        
+        /* Main block container width */
+        .main .block-container {
+            max-width: 100%;
+            padding-right: 1rem;
+        }
+        
+        /* Slider styling */
+        .stSlider {
+            padding-bottom: 0.5rem;
+            padding-right: 1.5rem;
+        }
+        
+        /* Plotly chart centering */
+        .element-container:has(.js-plotly-plot) {
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Sidebar styling - multiple selectors for different versions */
+        .css-1d391kg, .css-1lcbmhc, .css-17ziqus, .css-1cypcdb, 
+        [data-testid="stSidebar"], .stSidebar {
+            background-color: #000000 !important;
+        }
+        
+        /* Sidebar content */
+        .css-1lcbmhc .css-1outpf7, .css-17ziqus .css-1outpf7 {
+            background-color: #000000 !important;
+        }
+        
+        /* Text input styling */
+        .stTextInput > div > div > input {
+            background-color: #333333;
+            color: #ffffff;
+            border: 1px solid #555555;
+        }
+        
+        /* Button styling */
+        .stButton > button {
+            background-color: #333333;
+            color: #ffffff;
+            border: 1px solid #555555;
+        }
+        
+        .stButton > button:hover {
+            background-color: #555555;
+            border: 1px solid #777777;
+        }
+        
+        /* Number input styling */
+        .stNumberInput > div > div > input {
+            background-color: #333333;
+            color: #ffffff;
+            border: 1px solid #555555;
+        }
+        
+        /* Select box styling */
+        .stSelectbox > div > div > div {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        
+        /* Radio button text */
+        .stRadio > div > label > div {
+            color: #ffffff;
+        }
+        
+        /* Markdown text */
+        .stMarkdown {
+            color: #ffffff;
+        }
+        
+        /* Headers */
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffffff !important;
+        }
+        
+        /* Top toolbar/header area */
+        .css-18e3th9, .css-1d391kg, .css-k1vhr4, 
+        [data-testid="stToolbar"], .stApp > header,
+        .css-1y4p8pa, .css-12oz5g7 {
+            background-color: #000000 !important;
+        }
+        
+        /* Deploy button area */
+        .css-1rs6os, .css-17lntkn, .css-1cpxqw2 {
+            background-color: #000000 !important;
+        }
+        
+        /* Main header */
+        .main-header, .css-1avcm0n {
+            background-color: #000000 !important;
+        }
+        
+        /* Success/error messages */
+        .stSuccess {
+            background-color: #1a4a1a;
+            color: #ffffff;
+        }
+        
+        .stError {
+            background-color: #4a1a1a;
+            color: #ffffff;
+        }
+        
+        .stWarning {
+            background-color: #4a4a1a;
+            color: #ffffff;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 # Set wide layout
 st.set_page_config(layout="wide")
+inject_custom_css()
 st.title("💖 1000 Love")
 
 if "app_started" not in st.session_state:
