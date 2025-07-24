@@ -21,7 +21,9 @@ if not st.session_state.app_started:
         # 1) Run the typewriter greeting
         st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         typewriter_text = """Wassup my Mooncakes <3
+
 Press the button below to watch 1000 hearts drawn for you while one of the many songs we've shared over the last 5 years plays for you.
+
 I love you alotl axolotl!
 
 
@@ -206,4 +208,4 @@ if st.session_state.app_started:
         
         #st.success("All hearts drawn across the grid 💘")
     else:
-        st.write("Use the sidebar to generate a magical heart grid ✨")
+        st.write("Use the sidebar to generate a magical heart grid")
