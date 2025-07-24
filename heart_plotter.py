@@ -168,6 +168,8 @@ if not st.session_state.app_started:
         st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         typewriter_text = """Wassup my Mooncakes <3
 
+The other day you told me that I owe you 1000 loves. You never clarified what that means, so here's my attempt at delivering.
+
 Press the button below to watch 1000 hearts drawn for you while one of the many songs we've shared over the last 5 years plays for you.
 
 I love you alotl axolotl!
